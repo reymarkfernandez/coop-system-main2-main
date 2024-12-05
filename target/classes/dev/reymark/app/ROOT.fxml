@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.reymark.app.RootController">
+   <left>
+      <VBox prefHeight="600.0" prefWidth="426.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="46.0" prefWidth="377.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="213.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="164.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField />
+               </children>
+            </GridPane>
+            <TableView fx:id="memberTable" prefHeight="471.0" prefWidth="406.0">
+              <columns>
+                <TableColumn fx:id="memberIdColumn" prefWidth="107.0" text="memberID" />
+                <TableColumn fx:id="lnameColumn" prefWidth="97.0" text="Lname" />
+                  <TableColumn fx:id="fnameColumn" prefWidth="79.0" text="Fname" />
+                  <TableColumn fx:id="amountpaidColumn" prefWidth="156.0" text="AmountPaid" />
+              </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="679.0" prefWidth="500.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Label text="Member Profile">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Region prefHeight="36.0" prefWidth="374.0" />
+            <GridPane hgap="10.0" prefHeight="51.0" prefWidth="408.0" vgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="77.0" text="First Name" />
+                        <TextField fx:id="firstname" promptText="First Name" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="Middle Name" />
+                        <TextField fx:id="middlename" promptText="MiddleName" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                     <children>
+                        <Label text="Last Name" />
+                        <TextField fx:id="lastname" prefHeight="25.0" prefWidth="140.0" text="Last Name" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <GridPane hgap="10.0" prefHeight="34.0" prefWidth="494.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="163.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="245.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="34.0" prefWidth="168.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="66.0" text="BirthDate" />
+                        <Region prefHeight="34.0" prefWidth="20.0" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="birthdate" prefHeight="25.0" prefWidth="136.0" promptText="BDate" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="34.0" prefWidth="234.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="89.0" text="Birth Place" />
+                        <Region prefHeight="34.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="birthplace" prefHeight="25.0" prefWidth="145.0" promptText="Birthplace" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane hgap="10.0" prefHeight="40.0" prefWidth="408.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="134.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="70.0" text="Civil Status" />
+                        <ComboBox fx:id="ccivilstatus" prefHeight="25.0" prefWidth="117.0" promptText="Sin..." />
+                        <Region prefHeight="40.0" prefWidth="13.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="254.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="104.0" text="Home Address" />
+                        <TextField fx:id="homeaddress" prefHeight="25.0" prefWidth="169.0" promptText="Home Address" />
+                        <Region prefHeight="40.0" prefWidth="17.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="70.0" prefWidth="496.0" vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="103.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="463.0" minWidth="10.0" prefWidth="412.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="104.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="75.0" text="Occupation" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="72.0" text="Office" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <ComboBox prefHeight="25.0" prefWidth="373.0" promptText="Item 1" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="occupation" prefHeight="25.0" prefWidth="373.0" promptText="Job" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane hgap="10.0" prefHeight="85.0" prefWidth="408.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="238.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="191.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="58.0" text="Salary" />
+                        <TextField alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="160.0" promptText="0.00" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="57.0" text="Relative" />
+                        <TextField fx:id="relativefield" prefHeight="25.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Region prefHeight="43.0" prefWidth="58.0" />
+                        <Label prefHeight="17.0" prefWidth="80.0" text="Income" />
+                        <TextField fx:id="income" alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="150.0" promptText="0.00" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="75.0" text="Relation" />
+                        <ComboBox prefHeight="25.0" prefWidth="176.0" promptText="Spouse" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <HBox prefHeight="39.0" prefWidth="408.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="76.0" text="Dependents" />
+                  <TextField fx:id="dependents" prefHeight="25.0" prefWidth="403.0" promptText="List of dependents" />
+               </children>
+            </HBox>
+            <GridPane hgap="15.0" prefHeight="62.0" prefWidth="552.0" vgap="15.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="234.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="384.0" minWidth="10.0" prefWidth="271.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="88.0" text="Stock Share" />
+                        <TextField alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="122.0" promptText="0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="331.0" spacing="10.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="95.0" text="StockAmoun" />
+                        <TextField alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="129.0" promptText="0.00" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="95.0" text="Amount Paid" />
+                        <TextField alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="130.0" promptText="0.00" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="90.0" text="Stock Paid" />
+                        <TextField alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="122.0" promptText="0" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <Region prefHeight="13.0" prefWidth="515.0" />
+            <GridPane prefHeight="51.0" prefWidth="408.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="310.0" minWidth="10.0" prefWidth="181.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="322.0" minWidth="10.0" prefWidth="153.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="177.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="75.0" text="Delete" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Save" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Add Member" GridPane.columnIndex="2" />
+                  <Region prefHeight="51.0" prefWidth="218.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
